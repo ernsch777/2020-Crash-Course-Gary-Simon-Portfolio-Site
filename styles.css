@@ -66,10 +66,12 @@ header li a {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     justify-content: space-around;
     margin-top: 2em;
+    margin-left: 15px;
 }
 
 .stats li {
     margin-bottom: 1.5em;
+    /* text-align: center; */
 }
 
 .stats strong {
@@ -88,7 +90,7 @@ header li a {
 
 .extended-wrapper {
     padding: 0 1.5em 2em;
-    max-width: 1230px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -136,7 +138,7 @@ h2 {
 h2::before {
     content: " ";
     position: absolute;
-    top: 6px-.3em;
+    top: -.1em;
     height: 5px;
     width: 30px;
     background: #B728DC;
@@ -164,6 +166,21 @@ h2::before {
         display: grid;
         grid-template-columns: repeat(2,auto);
     }
+    .companies li {
+        margin: 1em 0;
+    }
+    /* .ps1 {
+        order: 1;
+    }
+    .ss1 {
+        order: 2;
+    }
+    .ps2 {
+        order: 3;
+    }
+    .ss2 {
+        order: 4;
+    }  */
 }
 
 @media (min-width: 650px){
@@ -195,10 +212,16 @@ h2::before {
     ul.carousal li{
         margin-bottom: 0;
         padding: 2em;
+        /* This box shadow is number 63 from https://getcssscan.com/css-box-shadow-examples .  It's not the one I was looking for on this project, but will save it for a family photo blog later
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;       }*/
+}
+
+    h2 {
+        font-size: 1.5em;
     }
-    .companies {
-        display: flex;
-        justify-content: space-between;
+    h2::before {
+        height: 6px;
+        width: 35px;
     }
 }
 
@@ -209,7 +232,7 @@ h2::before {
     .stats {
         display: flex;
         justify-content: space-between;
-        margin: 0;
+        margin-top: 0;
     }
     .companies {
         grid-template-columns: repeat(4,auto);
@@ -228,10 +251,15 @@ h2::before {
         padding: 4em;
     }
     .light-purple-wrapper {
-        padding-bottom: 4em;
+        padding: 2em 0 3em;
     }
     .move-up {
         margin-top: -7em;
+    }
+    h2::before {
+        top: -2px;
+        height: 8px;
+        width: 50px;
     }
 }
 @media (min-width:1200px){
@@ -243,6 +271,4 @@ h2::before {
         li:last-child {
             border: 0;
         }
-    }
-
 }
